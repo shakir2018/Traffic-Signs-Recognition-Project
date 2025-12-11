@@ -3,20 +3,9 @@ Traffic Sign Recognition Project- Self Driving Car
 
 A deep learning-based project for recognizing German traffic signs using a Convolutional Neural Network (CNN) inspired by LeNet architecture. This project demonstrates data preprocessing, augmentation, model training, and evaluation on the German Traffic Sign Recognition Benchmark (GTSRB) dataset.
 
-Table of Contents
 
 Overview
-Dataset
-Installation
-Usage
-Model Architecture
-Training and Evaluation
-Results
-Folder Structure
-Contributing
-License
 
-Overview
 This project implements a traffic sign classifier using TensorFlow. Key features include:
 
 Image preprocessing (grayscale conversion, normalization, histogram equalization).
@@ -28,6 +17,7 @@ Visualization of dataset distribution, augmented samples, and training progress.
 The model achieves high accuracy on the test set, making it suitable for real-world applications like autonomous driving assistance systems.
 
 Dataset
+
 The project uses the German Traffic Sign Dataset from Kaggle, containing ~39,000 training images across 43 classes. The dataset is stored in german-traffic-sign-dataset.zip (handled via Git LFS for large files).
 
 Training set: 39,209 images (augmented to ~382,789).
@@ -42,6 +32,7 @@ cd Traffic-Signs-Recognition-Project
 Install Git LFS (for large dataset files):textapt-get install git-lfs
 git lfs install
 git lfs pull
+
 Install dependencies (Python 3.6+ recommended; tested on Google Colab with TensorFlow 1.x):textpip install -r requirements.txt(Note: If not present, create requirements.txt with: tensorflow==1.15.0, numpy, matplotlib, opencv-python, scikit-learn, etc.)
 For Kaggle dataset download (optional, if not using the zipped file):
 Place your kaggle.json in the root.
@@ -50,10 +41,12 @@ Run: kaggle datasets download -d meowmeowmeowmeowmeow/gtsrb-german-traffic-sign
 Usage
 
 Run the Notebook:
+
 Open traffic_Signs_Recognition_Project.ipynb in Jupyter or Google Colab.
 Execute cells sequentially to load data, preprocess, train the model, and evaluate.
 
 Interactive Demo:
+
 Use the Binder badge above to run the notebook in-browser (no setup needed).
 Or view statically via nbviewer.
 
@@ -63,6 +56,7 @@ Use the trained model to predict on new images via the predict_tf1 function.
 
 
 Model Architecture
+
 The model is a modified LeNet CNN:
 
 Input: 32x32x1 grayscale images.
@@ -98,20 +92,9 @@ Final Test Accuracy: ~92% (varies with runs; see notebook for details).
 Confusion matrix and top errors available in the notebook.
 Model generalizes well due to augmentation, handling real-world variations like lighting and angles.
 
-Folder Structure
-textTraffic-Signs-Recognition-Project/
-├── traffic_Signs_Recognition_Project.ipynb  # Main notebook
-├── german-traffic-sign-dataset.zip          # Dataset (via Git LFS)
-├── Plots/                                   # Visualizations
-│   ├── augmented_image.png
-│   ├── random_samples.png
-│   ├── training_set_plot.png
-│   └── transformation_images.png
-├── models/                                  # Saved model checkpoints
-├── training.log                             # Training logs
-├── requirements.txt                         # Dependencies
-└── README.md                                # This file
+
 Contributing
+
 Contributions are welcome! Please:
 
 Fork the repo.
@@ -120,6 +103,8 @@ Commit changes.
 Push and open a Pull Request.
 
 Issues for bugs or enhancements are appreciated.
+
 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
